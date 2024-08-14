@@ -5,8 +5,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int[] path = new int[1000];
-        int now = 500;
+        int[] path = new int[10000];
+        int now = 5000;
 
         for (int i = 0; i < n; i++) {
             int x = sc.nextInt();
