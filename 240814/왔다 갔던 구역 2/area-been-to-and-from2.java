@@ -19,7 +19,7 @@ public class Main {
                 }
             } else if (direction.equals("L")) {
                 for (int j = 0; j < x; j++) {
-                    path[now]++;
+                    path[now-1]++;
                     now--;
                 }
             }
