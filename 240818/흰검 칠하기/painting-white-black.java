@@ -6,10 +6,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int[] array = new int[10000];
-        int[] black = new int[10000];
-        int[] white = new int[10000];
-        int now = 5000;
+        int[] array = new int[1000000];
+        int[] black = new int[1000000];
+        int[] white = new int[1000000];
+        int now = 500000;
 
         for(int i=0;i<n;i++){
             int x= sc.nextInt();
@@ -36,7 +36,7 @@ public class Main {
         int countblack = 0;
         int countgray = 0;
 
-        for(int j=0; j<10000; j++){
+        for(int j=0; j<1000000; j++){
             if(array[j]==1 && !(black[j]>=2&&white[j]>=2)){
                 countblack++;
             }
