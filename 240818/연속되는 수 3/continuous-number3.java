@@ -8,7 +8,7 @@ public class Main {
         int n = sc.nextInt();
         int max = 1;
 
-        int[] numbers = new int[n];
+        int[] numbers = new int[n+1];
 
         for(int i = 0; i<n; i++){
             numbers[i]=sc.nextInt();
@@ -16,7 +16,7 @@ public class Main {
 
         int count = 1;
 
-        for(int i = 0; i<n; i++){
+        for(int i = 0; i<n+1; i++){
             if(numbers[i]>0){
                 numbers[i]=2;
             }else{
