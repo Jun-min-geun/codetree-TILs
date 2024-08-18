@@ -8,17 +8,19 @@ public class Main {
         int n = sc.nextInt();
         int max = 1;
 
-        int[] numbers = new int[n];
+        int[] numbers = new int[n+1];
 
         for(int i = 0; i<n; i++){
             numbers[i]=sc.nextInt();
         }
 
-        int count = 0;
-        for(int i = 1; i<n; i++){
-            if(numbers[i]==numbers[i-1]){
+        int count = 1;
+        for(int i = 0; i<n+1; i++){
+            if(i==0){
+                count=1;
+            }else if(numbers[i]==numbers[i-1]){
                 count++;
-            }else{
+            }else if(numbers[i]!=numbers[i-1]){
                 if(count>max){
                     max=count;
                 }
