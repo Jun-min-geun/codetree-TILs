@@ -13,8 +13,8 @@ public class Main {
             array[i]=sc.nextLine();
         }
 
-        for(int a=0; a<n; a++){
-            for(int b=a+1; b<n; b++){
+        for(int a=0; a<n-2; a++){
+            for(int b=a+1; b<n-1; b++){
                 for(int c=b+1;c<n;c++){
                     int q = isCarry(array[a],array[b],array[c]);
                         max=Math.max(max,q);
@@ -47,11 +47,11 @@ public class Main {
                 return -1;
             }
         }
-        
+
         for(int z=0; z<5;z++){
             num[z]=one[z]+two[z]+three[z];
         }
 
-        return (num[0]*10000+num[1]*1000+num[2]*100+num[3]*10+num[4]);
+        return num[0]*10000+num[1]*1000+num[2]*100+num[3]*10+num[4];
     }
 }
