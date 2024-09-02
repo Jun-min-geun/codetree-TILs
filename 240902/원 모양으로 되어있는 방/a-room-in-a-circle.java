@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int min = 999999;
+        int min = 999999999;
 
         int N = sc.nextInt();
         int[] array = new int[N];
@@ -22,7 +22,7 @@ public class Main {
             for(int c=0; c<a; c++){
                 distance += array[c]*(N-a+c);
             }
-            
+
             min = Math.min(min,distance);
         }
 
