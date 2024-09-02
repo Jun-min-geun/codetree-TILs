@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int minsum = 9999;
+        int minsum = 99999999;
 
         int n = sc.nextInt();
         int[] array = new int[n];
