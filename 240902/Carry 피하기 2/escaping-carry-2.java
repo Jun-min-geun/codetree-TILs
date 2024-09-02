@@ -8,6 +8,7 @@ public class Main {
         int max = -1;
 
         int n =sc.nextInt();
+        sc.nextLine();
         String[] array = new String[n];
         for(int i=0; i<n;i++){
             array[i]=sc.nextLine();
@@ -41,7 +42,6 @@ public class Main {
         for(int k=0;k<c.length();k++){
             three[5-c.length()+k]=c.charAt(k)-'0';
         }
-
         for(int q=0; q<5; q++){
             if(one[q]+two[q]+three[q]>=10){
                 return -1;
