@@ -1,42 +1,40 @@
 import java.util.*;
-
 public class Main {
+    public static final int MAX_N = 100;
+    
+    public static int n, m;
+    public static int[] arr1 = new int[MAX_N];
+    public static int[] arr2 = new int[MAX_N];
+    public static int[] tmp = new int[MAX_N];
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        int N = sc.nextInt();
-        int M = sc.nextInt();
-        int[] array = new int[N];
-        int[] answer = new int[M];
-        int count=0;
-
-        for(int i=0; i<N; i++){
-            array[i]=sc.nextInt();
-        }
-        for(int i=0; i<M; i++){
-            answer[i]=sc.nextInt();
-        }
-
-        for(int a=0;a<=N-M;a++){
-            boolean beauty = false;
-            for(int b=a;b<a+M;b++){
-                beauty=false;
-                for(int c=0;c<M;c++){
-                    if(array[b]==answer[c]){
-                        beauty=true;
-                    }
-                }
-                if(!beauty){
+        n = sc.nextInt();
+        m = sc.nextInt();
+        for(int i = 0; i < n; i++)
+            arr1[i] = sc.nextInt();
+        for(int i = 0; i < m; i++)
+            arr2[i] = sc.nextInt();
+        
+        Arrays.sort(arr2, 0, m);
+        
+        int cnt = 0;
+        for(int i = 0; i <= n - m; i++) {
+            for(int j = 0; j < m; j++)
+                tmp[j] = arr1[i + j];
+            Arrays.sort(tmp, 0, m);
+            
+            boolean issame = true;
+            for(int j = 0; j < m; j++)
+                if(tmp[j] != arr2[j]) {
+                    issame = false;
                     break;
                 }
-            }
-            if(beauty){
-                count++;
-            }
+            
+            if(issame)
+                cnt++;
         }
-
-
-        System.out.println(count);
-
-        }
+                            
+        System.out.print(cnt);
     }
+}
