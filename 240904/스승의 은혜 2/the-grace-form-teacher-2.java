@@ -25,19 +25,22 @@ public class Main {
                 }else{
                     array[b]=P[b];
                 }
-                
+
             }
 
             Arrays.sort(array);
-//            for(int q=0;q<N;q++){
-//                System.out.print(array[q]+" ");
-//            }
-//            System.out.println();
+            for(int q=0;q<N;q++){
+                System.out.print(array[q]+" ");
+            }
+            System.out.println();
 
             for(int c=0;c<N; c++){
                 if(value+array[c]<=B){
                     value+=array[c];
                     count++;
+                }else if(value+array[c]<=B && c==N-1){
+                    max=Math.max(max,count+1);
+                    break;
                 }else{
                     max=Math.max(max,count);
                     break;
