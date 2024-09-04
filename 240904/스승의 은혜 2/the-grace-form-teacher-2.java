@@ -29,10 +29,6 @@ public class Main {
             }
 
             Arrays.sort(array);
-            for(int q=0;q<N;q++){
-                System.out.print(array[q]+" ");
-            }
-            System.out.println();
 
             for(int c=0;c<N; c++){
                 if(value+array[c]<=B){
