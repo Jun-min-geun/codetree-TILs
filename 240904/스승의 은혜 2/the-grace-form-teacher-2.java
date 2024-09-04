@@ -31,7 +31,7 @@ public class Main {
             Arrays.sort(array);
 
             for(int c=0;c<N; c++){
-                if(value+array[c]<=B){
+                if(value+array[c]<=B && c!=N-1){
                     value+=array[c];
                     count++;
                 }else if(value+array[c]<=B && c==N-1){
