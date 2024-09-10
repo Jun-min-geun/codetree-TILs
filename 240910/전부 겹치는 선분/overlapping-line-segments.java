@@ -15,7 +15,7 @@ public class Main {
 
        for(int a=0;a<n;a++){
            for(int b=a+1;b<n;b++){
-               if(array[a][1]>array[b][0] || array[b][1]>array[a][0]){
+               if(array[a][1]>=array[b][0] || array[b][1]>=array[a][0]){
                    cross=true;
                    break;
                }
