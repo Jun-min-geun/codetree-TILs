@@ -9,7 +9,7 @@ public class Main {
         int x3=sc.nextInt();
         int x4=sc.nextInt();
 
-        if(x2<=x3 || x4<=x1){
+        if(x2<x3 || x4<x1){
             System.out.println("nonintersecting");
         }
         else{
