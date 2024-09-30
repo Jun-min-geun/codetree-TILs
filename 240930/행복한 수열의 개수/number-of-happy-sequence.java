@@ -20,11 +20,8 @@ public class Main {
 
         //시작점설정
         for(int a=0; a<N; a++){
+            int count=1;
             for(int b=0; b<N; b++){
-                int count=1;
-                if(b==0){
-                    count=1;
-                }
                 if(b!=0 && array[a][b]==array[a][b-1]){
                     count++;
                 }else{
@@ -38,11 +35,8 @@ public class Main {
         }
 
         for(int c=0; c<N; c++){
+            int count=1;
             for(int d=0; d<N; d++){
-                int count=1;
-                if(d==0){
-                    count=1;
-                }
                 if(d!=0 && array[d][c]==array[d-1][c]){
                     count++;
                 }else{
