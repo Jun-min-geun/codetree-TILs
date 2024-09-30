@@ -23,14 +23,14 @@ public class Main {
             for(int b=0; b<N; b++){
                 int count=1;
                 if(b==0){
-                    continue;
+                    count=1;
                 }
-                if(array[a][b]==array[a][b-1]){
+                if(b!=0 && array[a][b]==array[a][b-1]){
                     count++;
                 }else{
                     count=1;
                 }
-                if(count>=m){
+                if(count==m){
                     countnum++;
                     break;
                 }
@@ -41,14 +41,14 @@ public class Main {
             for(int d=0; d<N; d++){
                 int count=1;
                 if(d==0){
-                    continue;
+                    count=1;
                 }
-                if(array[d][c]==array[d-1][c]){
+                if(d!=0 && array[d][c]==array[d-1][c]){
                     count++;
                 }else{
                     count=1;
                 }
-                if(count>=m){
+                if(count==m){
                     countnum++;
                     break;
                 }
