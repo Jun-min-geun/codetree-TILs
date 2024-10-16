@@ -37,7 +37,7 @@ public class Main {
         }
 
         //
-        for(int i = 1; i <= 3; i++) {
+        for(int i = 1; i <= 4; i++) {
             selectedNums.add(i);
             findPermutations(cnt + 1);
             selectedNums.remove(selectedNums.size() - 1);
