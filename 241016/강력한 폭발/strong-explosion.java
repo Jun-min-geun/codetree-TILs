@@ -18,7 +18,6 @@ public class Main {
                     number++;
                 }
             }
-            System.out.println();
         }
 
         max = Math.max(number,max);
