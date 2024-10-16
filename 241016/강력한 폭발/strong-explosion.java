@@ -14,7 +14,6 @@ public class Main {
         int number = 0;
         for(int i=2; i<n+2;i++){
             for(int j=2;j<n+2;j++){
-                System.out.print(array[i][j]+" ");
                 if(array[i][j]!=0){
                     number++;
                 }
@@ -26,7 +25,6 @@ public class Main {
     }
 
     public static void goBomb(int bombNum, int x, int y){
-        System.out.println((x-2)+" "+(y-2)+" bomb:"+bombNum);
         if(bombNum==1){
             for(int i=0;i<4;i++){
                 if(array[x+bomb1[i][0]][y+bomb1[i][1]]==0)
