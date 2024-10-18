@@ -11,7 +11,7 @@ public class Main {
     public static void checkMax() {
         int count = 0;
         for(int i=1; i<=k;i++){
-            if(locate[i]==m){
+            if(locate[i]>=m){
                 count++;
             }
         }
@@ -29,17 +29,14 @@ public class Main {
 
         for (int i = 1; i <= k; i++) {
 
-            if(locate[i]==m){
+            if(locate[i]>=m){
                 continue;
             }
-            else if(locate[i]+array[cnt]>=m){
-                locate[i]=m;
-            }
-            else{
-                locate[i]=locate[i]+array[cnt];
-            }
+
+            locate[i]=locate[i]+array[cnt];
 
             findPermutations(cnt+1);
+            locate[i]-=array[cnt];
         }
 
     }
