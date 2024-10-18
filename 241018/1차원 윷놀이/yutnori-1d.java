@@ -30,11 +30,13 @@ public class Main {
         for (int i = 1; i <= k; i++) {
 
             if(locate[i]>=m){
+                
+                findPermutations(cnt+1);
                 continue;
             }
 
             locate[i]=locate[i]+array[cnt];
-
+            
             findPermutations(cnt+1);
             locate[i]-=array[cnt];
         }
