@@ -4,7 +4,7 @@ public class Main {
     public static final int MAX_NUM = 100;
     public static int n, m;
 
-    public static int[][] graph = new int[MAX_NUM + 1][MAX_NUM + 1];
+    public static int[][] graph = new int[MAX_NUM + 2][MAX_NUM + 2];
 
     public static boolean isCertain = false;
 
