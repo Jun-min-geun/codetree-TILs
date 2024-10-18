@@ -15,7 +15,7 @@ public class Main {
     }
 
     public static void findCombination(int currNum, int cnt) {
-        if(currNum == n+1) {
+        if(currNum == n) {
             if(cnt == m)
                 printCombination();
             return;
@@ -41,7 +41,7 @@ public class Main {
             array[i]=sc.nextInt();
         }
 
-        findCombination(1, 0);
+        findCombination(0, 0);
 
         System.out.println(max);
     }
