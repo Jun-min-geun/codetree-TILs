@@ -8,7 +8,7 @@ public class Main {
     // 출력
     public static void checkMax() {
         for(int i=0; i<array.size();i++){
-            System.out.print(array.get(i));
+            System.out.print(array.get(i)+" ");
         }
         System.out.println();
     }
