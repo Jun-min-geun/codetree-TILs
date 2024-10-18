@@ -10,7 +10,7 @@ public class Main {
         int value = 0;
         for(int i = 0; i < combination.size(); i++)
             value=value^combination.get(i);
-        
+
         max=Math.max(value,max);
     }
 
@@ -22,7 +22,7 @@ public class Main {
         }
 
         // currNum에 해당하는 숫자를 사용했을 때의 경우
-        combination.add(currNum);
+        combination.add(array[currNum]);
         findCombination(currNum + 1, cnt + 1);
         combination.remove(combination.size() - 1);
 
@@ -36,7 +36,7 @@ public class Main {
         n = sc.nextInt();
         m = sc.nextInt();
         array = new int[n];
-        
+
         for(int i=0; i<n; i++){
             array[i]=sc.nextInt();
         }
