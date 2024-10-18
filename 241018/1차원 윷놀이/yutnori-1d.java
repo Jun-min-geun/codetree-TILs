@@ -54,6 +54,9 @@ public class Main {
         for(int i=0; i<n;i++){
             array[i]=sc.nextInt();
         }
+        for(int j=1; j<=k;j++){
+            locate[j]=1;
+        }
 
 
         findPermutations(0);
