@@ -2,30 +2,23 @@ import java.util.*;
 
 public class Main {
     public static int n;
-    public static int max = Integer.MIN_VALUE;
+    public static int min = Integer.MAX_VALUE;
     public static int num;
 
     public static int[] array = new int[9999];
 
-    public static void findPermutations(int cnt) {
-        int way = array[cnt];
-        // n개 뽑
-        if(cnt == n) {
-            max=Math.max(max,num);
-            num=0;
+    public static void findPermutations(int locate) {
+        int way = array[locate];
+        // 
+        if(locate >= n) {
+            min=Math.min(min,num);
             return;
         }
 
         for (int i = 1; i <= way; i++) {
-            if(array[cnt]+i>=n){
-                num++;
-                findPermutations(n);
-                num--;
-                continue;
-            }
 
             num++;
-            findPermutations(array[cnt]+i);
+            findPermutations(locate+i);
             num--;
         }
 
@@ -36,7 +29,7 @@ public class Main {
 
         n = sc.nextInt();
 
-        for(int i=0; i<n;i++){
+        for(int i=1; i<=n;i++){
             array[i]=sc.nextInt();
         }
 
@@ -44,7 +37,12 @@ public class Main {
 
         findPermutations(1);
 
+        if(min==Integer.MAX_VALUE){
+            System.out.println(-1);
+        }
+        else{
+            System.out.println(min);
+        }
 
-        System.out.println(max);
     }
 }
