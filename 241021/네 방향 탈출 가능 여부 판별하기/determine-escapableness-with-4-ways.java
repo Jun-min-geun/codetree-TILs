@@ -12,14 +12,13 @@ public class Main {
     public static boolean can;
 
     private static boolean canGo(int x, int y) {
-        return x >= 0 && x < n && y >= 0 && y < n;
+        return x >= 0 && x < n && y >= 0 && y < m;
     }
 
     public static void BFS() {
         while(!queue.isEmpty()){
             int x = queue.peek();
             int y = queue.peek();
-
             int[] dx = new int[]{0, 1, 0, -1};
             int[] dy = new int[]{1, 0, -1, 0};
 
@@ -28,7 +27,7 @@ public class Main {
                 int newY = y + dy[dir];
 
                 if(canGo(newX,newY)) {
-                    if (!visited[newX][newY]) {
+                    if (!visited[newX][newY] && grid[newX][newY]==1) {
                         queue.add(newX);
                         queue.add(newY);
                         visited[newX][newY]=true;
