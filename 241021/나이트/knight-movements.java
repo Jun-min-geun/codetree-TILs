@@ -8,6 +8,7 @@ public class Main {
     public static int[][] grid = new int[MAX_NUM][MAX_NUM];
     public static boolean[][] visited = new boolean[MAX_NUM][MAX_NUM];
 
+    public static boolean isTrue;
     public static Queue<Integer> queue = new LinkedList<>();
 
 
@@ -19,6 +20,11 @@ public class Main {
         while(!queue.isEmpty()){
             int x = queue.poll();
             int y = queue.poll();
+
+            if(x==r2 && y==c2){
+                isTrue=true;
+                break;
+            }
 //            System.out.println("x:"+x+" y:"+y);
             int[] dx = new int[]{-1, -2, 1, 2,-1,-2,1,2};
             int[] dy = new int[]{-2, -1, 2, 1,2,1,-2,-1};
@@ -49,13 +55,12 @@ public class Main {
         r2=sc.nextInt();;
         c2=sc.nextInt();
 
-
         queue.add(r1);
         queue.add(c1);
 
         BFS();
 
-        if(grid[r2][c2]!=0){
+        if(grid[r2][c2]!=0 || isTrue){
             System.out.println(grid[r2][c2]);
         }else{
             System.out.println(-1);
