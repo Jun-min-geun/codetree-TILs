@@ -38,9 +38,9 @@ public class Main {
 
         }
     }
-    private static int[] nextStart() {
+    private static int[] nextStart(int StartX, int StartY) {
         int nextX=-1;int nextY=-1;
-        int max = 1;
+        int max = -1;
         for(int b=n-1;b>=0;b--){
             for(int c=n-1;c>=0;c--){
                 if(visited[b][c]){
@@ -48,9 +48,13 @@ public class Main {
                 }
             }
         }
+        if(max==-1){
+            return new int[]{StartX,StartY};
+        }
         for(int i=n-1; i>=0; i--){
             for(int j=n-1;j>=0;j--){
                 if(grid[i][j]==max){
+//                    System.out.println("max: "+ max);
                     nextX=i;
                     nextY=j;
                 }
@@ -73,8 +77,8 @@ public class Main {
         startY=sc.nextInt()-1;
 
         for(int a=0;a<k;a++){
-//            System.out.println(startX+" "+startY);
-            if(grid[startX][startY]==1){
+//            System.out.println("시작점"+startX+" "+startY);
+            if(startX==-1){
                 break;
             }
             queue.add(startX);
@@ -82,14 +86,14 @@ public class Main {
 
             BFS();
 
-//            for(int q=0;q<n;q++){
-//                for(int p=0;p<n;p++){
+            for(int q=0;q<n;q++){
+                for(int p=0;p<n;p++){
 //                    System.out.print(visited[q][p]+" ");
-//                }
+                }
 //                System.out.println();
-//            }
+            }
 
-            int[] nexts = nextStart();
+            int[] nexts = nextStart(startX,startY);
 
             startX=nexts[0];startY=nexts[1];
             visited= new boolean[MAX_NUM][MAX_NUM];
