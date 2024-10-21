@@ -17,8 +17,9 @@ public class Main {
 
     public static void BFS() {
         while(!queue.isEmpty()){
-            int x = queue.peek();
-            int y = queue.peek();
+            int x = queue.poll();
+            int y = queue.poll();
+//            System.out.println("x:"+x+" y:"+y);
             int[] dx = new int[]{0, 1, 0, -1};
             int[] dy = new int[]{1, 0, -1, 0};
 
@@ -28,18 +29,18 @@ public class Main {
 
                 if(canGo(newX,newY)) {
                     if (!visited[newX][newY] && grid[newX][newY]==1) {
+//                        System.out.println("dkdkdkkdk "+newX+" "+newY);
                         queue.add(newX);
                         queue.add(newY);
                         visited[newX][newY]=true;
                     }
                 }
             }
+            
             if(x==n-1 && y==m-1){
                 can=true;
                 break;
             }
-            queue.remove();
-            queue.remove();
 
         }
     }
