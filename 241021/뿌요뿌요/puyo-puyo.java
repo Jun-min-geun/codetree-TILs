@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class Main {
-    public static final int DIR_NUM = 4;
     public static final int MAX_NUM = 100;
 
     public static int n;
@@ -43,7 +42,7 @@ public class Main {
             for (int j = 0; j < n; j++)
                 grid[i][j] = sc.nextInt();
 
-        for (int k = 0; k < MAX_NUM; k++) {
+        for (int k = 1; k <= MAX_NUM; k++) {
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
                     if (k == grid[i][j]) {
@@ -55,8 +54,8 @@ public class Main {
 
                         if (peopleNum >= 4) {
                             num++;
-                            maxNum = Math.max(maxNum, peopleNum);
                         }
+                        maxNum = Math.max(maxNum, peopleNum);
                     }
                 }
             }
