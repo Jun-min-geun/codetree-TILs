@@ -11,9 +11,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         n = sc.nextInt();
-
-        dp[0]=0;
-        dp[1]=2;
+        
+        dp[1]=1;
         dp[2]=3;
 
         for(int i=3; i<=n; i++){
